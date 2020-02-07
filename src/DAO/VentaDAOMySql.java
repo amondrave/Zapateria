@@ -32,8 +32,9 @@ public class VentaDAOMySql implements VentaDAO {
     final String UPDATE = "UPDATE venta SET zapato = ?, cliente = ?,pares = ?, precio = ? WHERE factura = ?";
     final String DELETE = "DELETE FROM venta WHERE factura = ?";
     final String GETALL = "SELECT factura, zapato, cliente, fecha, precio FROM venta";
-    final String GETLISTCHAR = "SELECT factura, zapato, fecha, precio FROM venta WHERE cliente = ?";
+    final String GETLISTCHAR = "SELECT factura, zapato,cliente, fecha, precio,pares FROM venta WHERE cliente = ?";
     final String GETONE = "SELECT factura, zapato, cliente, fecha,precio,pares FROM venta WHERE factura = ?";
+    //final String GETVENTA = "SELECT factura,zapato,cliente,fecha,precio,pares FROM venta WHERE ciente =?";
 
     private Connection conn;
     
@@ -300,5 +301,8 @@ public class VentaDAOMySql implements VentaDAO {
         sDate.setMonth(sDate.getMonth()-1);
         return sDate;
     }
+     
+     
+      
     
 }

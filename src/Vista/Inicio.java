@@ -29,7 +29,7 @@ public class Inicio extends javax.swing.JFrame {
     AgregarZapato az;
     BuscarZapato bz;
     BuscarCliente bc;
-    
+    Buscarfactura bv;
     Venta v;
     
     public Inicio(Login l) throws SQLException, DAOException {
@@ -42,6 +42,7 @@ public class Inicio extends javax.swing.JFrame {
         bz = new BuscarZapato(this);
         this.setResizable(false);
         bc = new BuscarCliente(this);
+        bv = new Buscarfactura(this);
         v=new Venta(this);
         this.l=l;
         this.getContentPane().setBackground(Color.decode("#FFFFCC"));
@@ -262,8 +263,7 @@ public class Inicio extends javax.swing.JFrame {
     }//GEN-LAST:event_agzapatoActionPerformed
 
     private void admActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_admActionPerformed
-        // TODO add your handling code here:
-        
+         bv.setVisible(true);
     }//GEN-LAST:event_admActionPerformed
 
     private void resetclaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetclaveActionPerformed
