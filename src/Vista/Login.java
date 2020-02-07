@@ -12,7 +12,6 @@ package Vista;
 import DAO.AdministradorDAOMySql;
 import DAOInterfaces.DAOException;
 import Modelo.Administrador;
-import Negocio.Imagen;
 import Negocio.Manager;
 import java.awt.Color;
 import java.io.File;

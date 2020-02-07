@@ -7,7 +7,6 @@
 package Vista;
 
 import DAOInterfaces.DAOException;
-import Negocio.Imagen;
 import Vista.Inicio;
 import java.awt.Color;
 import java.io.File;
@@ -35,7 +34,6 @@ hilo ejecutar = new hilo();
     public Carga() throws IOException {
         this.getContentPane().setBackground(Color.decode("#7E57C2"));
         initComponents();
-        imagen();
         Carga.this.getRootPane().setOpaque(false);        
         Carga.this.getContentPane ().setBackground (new Color (0, 0, 0, 0));
         Carga.this.setBackground (new Color (0, 0, 0, 0)); 
@@ -43,10 +41,10 @@ hilo ejecutar = new hilo();
         this.setLocationRelativeTo(this);
     }
     
-    public void imagen() throws IOException{
-        Imagen obj = new Imagen();
-            ImageIO.write(obj.redimensionar("src/Imagenes/295128.jpg", 0.5), "jpg", new File("src/Imagenes/recorte.jpg"));
-    }
+//    public void imagen() throws IOException{
+//            Imagen obj = new Imagen();
+//            ImageIO.write(obj.redimensionar("src/Imagenes/295128.jpg", 0.5), "jpg", new File("src/Imagenes/recorte.jpg"));
+//    }
 
     /**
      * This method is called from within the constructor to initialize the form.
